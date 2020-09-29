@@ -1,0 +1,14 @@
+<!-- 
+  [(ngModel)]="dataModel"  <-- 폼을 수정할때 데이터를 이렇게 받아올 수 있음
+-->
+
+<input [(ngModel)]="board.id"> 
+<input [(ngModel)]="board.title">
+
+<editor 
+apiKey="4138m6uy6t3j82sk0faucdoudogejlpmrpzpo1yw4kto3hr9" 
+[init]="{plugins: 'link'}"
+(onSelectionChange)="handleEvent($event)">
+</editor>
+
+<button (click)="setBoard()">저장</button>

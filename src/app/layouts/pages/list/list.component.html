@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>아이디</th>
+        <th>제목</th>
+    </tr>
+    <tbody *ngIf="boards">
+        <tr *ngFor="let board of boards">
+        <td>{{board.id}}</td>
+        <td>
+            <a (click)="findById(board.id)">
+            {{board.title}}
+            </a>
+        </td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="!boards">
+        <td>데이터가 없습니다</td>
+    </tbody>
+</table>
